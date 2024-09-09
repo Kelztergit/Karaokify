@@ -65,11 +65,18 @@ def process_audio(input_file, output_file, output_format):
 
 def main():
     """Main function to parse arguments and run the appropriate functions."""
-    parser = argparse.ArgumentParser(description="Karaoke audio processor using phase inversion.")
-    parser.add_argument("input_file", nargs='?', help="Input audio file (e.g., song.mp3)")
-    parser.add_argument("--output", help="Optional output file name", default=None)
-    parser.add_argument("--format", help="Output audio format (e.g., mp3, wav)", default="mp3")
-    parser.add_argument("--setup", action="store_true", help="Check and install dependencies")
+    parser = argparse.ArgumentParser(description="Karaokify : A simple karaoke audio processor using phase inversion.\n\n"
+                    "Usage examples:\n"
+                    "  python karaokify.py InputSong.mp3\n"
+                    "  which outputs InputSong_karaoked.mp3\n" 
+                    "  python karaokify.py InputSong.mp3 --output OutputSong --format wav\n"
+                    "  which outputs OutputSong.wav",
+            
+        formatter_class=argparse.RawTextHelpFormatter)
+    parser.add_argument("input_file", nargs='?', help="Input audio file (e.g., InputSong.mp3)")
+    parser.add_argument("--output", help="Optional output file name (e.g. --output OutputSong)", default=None)
+    parser.add_argument("--format", help="Output audio format (e.g., mp3, wav, see : https://ffmpeg.org//general.html#File-Formats) mp3 is selected by default", default="mp3")
+    parser.add_argument("--setup", action="store_true", help="Check for and then install dependencies if required")
 
     args = parser.parse_args()
 
@@ -81,7 +88,7 @@ def main():
 
     # Ensure an input file is provided if not setting up prerequisites
     if not args.input_file:
-        parser.print_help()
+        print("Error: Input file is required unless using --setup. For more information on usage use the -h argument")
         sys.exit(1)
 
     # Default output file name with '_karaoked' suffix if not provided
