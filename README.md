@@ -10,6 +10,19 @@ Karaokify uses a technique called phase inversion to remove vocals from stereo a
 3. **Recombining** the channels into a mono track, where the vocals (usually centered) are significantly attenuated.
 
 This results in that cheap old karaoke effect you've probably heard all too many times before.
+### Why It Works
+
+This method is effective because it exploits the fact that vocals are typically centered in the stereo mix, while instruments are often panned to the left or right. By inverting the phase of one channel and combining it with the other, the central vocals cancel out due to phase interference, leaving behind the instrumental tracks.
+
+### When It Doesn’t Work
+
+This technique may not be effective in the following scenarios:
+- **Non-Centered Vocals:** If the vocals are panned to one side, they will not be adequately removed.
+- **Mono Tracks:** If the audio is mono or does not have distinct left and right channels, phase inversion cannot be applied.
+- **Instrumental Centering:** If instrumental parts are also centered, they will be attenuated along with the vocals.
+- **Uneven Mixing:** Variations in how the original audio is mixed can impact the effectiveness of this method.
+
+
 
 ## Getting started
 To check for and install prerequisites before using the program for the first rime run it using the `--setup` option
