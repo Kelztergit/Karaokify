@@ -33,8 +33,12 @@ This command will Install necessary Python packages (pydub, numpy) if they are n
 Check for the presence of ffmpeg and prompt you to install it if it's not found.
 
 ## Usage
-To process an audiofile and create a 'karaoke version', use the following command "python karaokify InputFile.mp3" 
-This will add the _karaoked suffix to the output file.
+To process an audiofile and create a 'karaoke version', use the following command `python karaokify.py InputFile.mp3`
+
+This will process the file and add the _karaoked suffix to the output file's name `InputFile_karaoked.mp3`.
+
+If the Input file is located in a different location use the full location within quotation marks `python karaokify.py "C:\MusicLocation\InputFile.mp3"`
+It will output the song next to it.
 
 If you wish to specify a different name for the output file you can use the `--output` option 
 
