@@ -2,7 +2,7 @@ import subprocess
 import sys
 import importlib.util
 
-__description__ = "Karaokify prerequisite installer - a tool to check for and install the prerequisites."
+__description__ = "Karaokify prerequisite installer - a tool to check for and install the prerequisites." 
 
 def check_and_install_package(package_name):
     """Check if a package is installed, and install it if not."""
