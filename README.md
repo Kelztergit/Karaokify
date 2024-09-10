@@ -25,9 +25,9 @@ This technique may not be effective in the following scenarios:
 
 
 ## Getting started
-To check for and install prerequisites before using the program for the first time run the `InstallKaraokifyPrereqs.py` script
+To check for and install prerequisites before using the program for the first time run the `setup.py` script
 
-i.e. `python InstallKaraokifyPrereqs.py`
+i.e. `python setup.py`
 
 This script will Install necessary Python packages (pydub, numpy) if they are not already installed.
 Check for the presence of ffmpeg and prompt you to install it if it's not found.
