@@ -25,7 +25,7 @@ This technique may not be effective in the following scenarios:
 
 
 ## Getting started
-To check for and install prerequisites before using the program for the first rime run the `InstallKaraokifyPrereqs.py` script
+To check for and install prerequisites before using the program for the first time run the `InstallKaraokifyPrereqs.py` script
 
 i.e. `python InstallKaraokifyPrereqs.py`
 
@@ -46,10 +46,11 @@ e.g. `python karaokify.py InputFile.mp3 --output CustomName`
 
 Which would then output `CustomName.mp3`
 
-If you wish to specify a different output format you can do this using the `--format`  option
+If you wish to specify a different output format than mp3, which is the default, you can do this using the `--format`  option
 Which would let you pick, according to the pydub documentations, ["anything ffmpeg supports"](https://ffmpeg.org//general.html#File-Formats) 
-but most importantly, formats like wav, flac, ogg and mp3 are supported.
+but most importantly, formats like wav, flac, ogg and mp3 are all supported.
 E.g. `python karaokify.py InputFile.mp3 --format ogg`
+would output `InputFile_karaoked.ogg`
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
