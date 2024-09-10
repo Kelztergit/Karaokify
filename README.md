@@ -25,11 +25,11 @@ This technique may not be effective in the following scenarios:
 
 
 ## Getting started
-To check for and install prerequisites before using the program for the first rime run it using the `--setup` option
+To check for and install prerequisites before using the program for the first rime run the `InstallKaraokifyPrereqs.py` script
 
-i.e. `python karaokify.py --setup`
+i.e. `python InstallKaraokifyPrereqs.py`
 
-This command will Install necessary Python packages (pydub, numpy) if they are not already installed.
+This script will Install necessary Python packages (pydub, numpy) if they are not already installed.
 Check for the presence of ffmpeg and prompt you to install it if it's not found.
 
 ## Usage
